@@ -3,15 +3,15 @@
     text-decoration: none;
     padding: 0px;
     margin: 0;
-    animation: scrollreveal ease-in-out both;
-    
     /*animation-timeline: view();
-    animation-range: entry 0% cover 50%;*/
+    animation-range: entry 0% cover 50%;
+    animation: scrollreveal ease-in-out both;*/
 }
 html{
     background-image: url(background.png);
     background-size: cover;
     background-position: center;
+    
 }
 /*
     @keyframes scrollreveal{
@@ -25,6 +25,7 @@ html{
         }
     }
 */
+@import url('https://fonts.cdnfonts.com/css/typograph-pro');
 @keyframes slidedown {
     0% {
       transform: translate(0, -60px);
@@ -45,7 +46,7 @@ html{
       opacity:1;
     }
   }
-@import url('https://fonts.cdnfonts.com/css/typograph-pro');
+
 /*nav bar styling*/
 .nav-bar{
     display: grid;
@@ -64,7 +65,8 @@ html{
     animation-timing-function: ease;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    transform: translate(0, -60px)
+    transform: translate(0, -60px);
+    
     
 }
 /*nav bar font styling*/
@@ -72,7 +74,7 @@ html{
     font-family:'TYPOGRAPH PRO', sans-serif ;
     font-weight: bold;
     color: rgb(0, 0, 0);
-    font-size: 17px;
+    font-size:clamp(0.75rem,1.5vw,1rem);
     letter-spacing: 1px;
     stroke: none;
     transition: 0.3s;
@@ -83,7 +85,7 @@ html{
 }
 .item-1{
     justify-self: start;
-    margin-left: 10px;
+    margin-left: 20px;
     margin-right: 10px;
 }
 .item-2{
@@ -140,7 +142,7 @@ html{
     text-decoration: underline;
     color: rgb(41, 110, 214);
 }
-/*First body*/
+/*First page*/
 .first-page-grid{
     display: grid;
     position: relative;
@@ -149,6 +151,7 @@ html{
     justify-items: center;
     align-items: center;
     height: 100vh;
+    width: 100vw;
     animation-name: slideup;
     animation-duration: 2s;
     animation-timing-function: ease;
@@ -168,7 +171,7 @@ html{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 10px;
+    margin: 20px;
     height: 100vh;
     font-family:'TYPOGRAPH PRO', sans-serif; 
     animation-name: slideup;
@@ -176,7 +179,8 @@ html{
     animation-timing-function: ease;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    transform: translate(0, 60px)
+    transform: translate(0, 60px);
+    font-size:clamp(0.75rem,1.5vw,1rem);
 }
 .text-block-1{
     flex-grow:0.05;
@@ -192,3 +196,75 @@ html{
     text-align: center;
     line-height: 5vh;
 }
+/*Second page*/
+.second-page-grid{
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    grid-gap: 60px;
+}
+.second-page-grid h1{
+    font-family:'TYPOGRAPH PRO', sans-serif; 
+    text-align: center;
+    margin: 20px;
+}
+.wrapper{
+    width: 90%;
+    margin-inline: auto;
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1)20%,
+        rgba(0,0,0,1)80%,
+        rgba(0,0,0,0)
+    );
+}
+@keyframes slideleft {
+    to{
+        left:-400px;
+    }
+}
+.holder{
+    height: 400px;
+    width: 400px;
+    background-color: red;
+    position: absolute;
+    left: max(calc(400px * 8),100%);
+    animation-name: slideleft;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.holder1 {
+    animation-delay: calc(30s / 8 * (8 - 1) * -1);
+  }
+.holder2 {
+    animation-delay: calc(30s / 8 * (8 - 2) * -1);
+  }
+.holder3 {
+    animation-delay: calc(30s / 8 * (8 - 3) * -1);
+  }
+.holder4 {
+    animation-delay: calc(30s / 8 * (8 - 4) * -1);
+  }
+.holder5 {
+    animation-delay: calc(30s / 8 * (8 - 5) * -1);
+  }
+.holder6 {
+    animation-delay: calc(30s / 8 * (8 - 6) * -1);
+  }
+.holder7 {
+    animation-delay: calc(30s / 8 * (8 - 7) * -1);
+  }
+.holder8 {
+    animation-delay: calc(30s / 8 * (8 - 8) * -1);
+  }
