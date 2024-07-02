@@ -3,16 +3,16 @@
     text-decoration: none;
     padding: 0px;
     margin: 0;
+    
     /*animation-timeline: view();
     animation-range: entry 0% cover 50%;
     animation: scrollreveal ease-in-out both;*/
 }
-html{
-    background-image: url(background.png);
-    background-size: cover;
-    background-position: center;
-    
-}
+body{
+        background-image: url(background.png);
+        background-size: cover;
+        background-position: center;
+    }
 /*
     @keyframes scrollreveal{
         from{
@@ -145,19 +145,17 @@ html{
 /*First page*/
 .first-page-grid{
     display: grid;
-    position: relative;
+    position: fixed;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr ;
     justify-items: center;
     align-items: center;
     height: 100vh;
-    width: 100vw;
     animation-name: slideup;
     animation-duration: 2s;
     animation-timing-function: ease;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    transform: translate(0, 60px)
 }
 .block-4 img{
     height: 40vh;
@@ -172,7 +170,7 @@ html{
     align-items: center;
     justify-content: center;
     margin: 20px;
-    height: 100vh;
+    
     font-family:'TYPOGRAPH PRO', sans-serif; 
     animation-name: slideup;
     animation-duration: 3s;
@@ -200,13 +198,14 @@ html{
 .second-page-grid{
     display: grid;
     position: relative;
+    top: 100vh;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     justify-items: center;
     align-items: center;
     height: 100vh;
-    width: 100vw;
     grid-gap: 60px;
+    background-color: white;
 }
 .second-page-grid h1{
     font-family:'TYPOGRAPH PRO', sans-serif; 
@@ -235,7 +234,6 @@ html{
 .holder{
     height: 400px;
     width: 400px;
-    background-color: red;
     position: absolute;
     left: max(calc(400px * 8),100%);
     animation-name: slideleft;
