@@ -9,9 +9,9 @@
     animation: scrollreveal ease-in-out both;*/
 }
 body{
-        background-image: url(background.png);
-        background-size: cover;
-        background-position: center;
+    background-image: url(background.png);
+    background-size: cover;
+    background-position: center;
     }
 /*
     @keyframes scrollreveal{
@@ -82,6 +82,7 @@ body{
 /*items positioning */
 .item-1 img{
     height: 50px;
+    cursor: pointer;
 }
 .item-1{
     justify-self: start;
@@ -156,6 +157,10 @@ body{
     animation-timing-function: ease;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    animation: slowdown;
+    animation-duration: 1ms;
+    animation-direction: normal;
+    animation-timeline: scroll();
 }
 .block-4 img{
     height: 40vh;
@@ -206,6 +211,7 @@ body{
     height: 100vh;
     grid-gap: 60px;
     background-color: white;
+    
 }
 .second-page-grid h1{
     font-family:'TYPOGRAPH PRO', sans-serif; 
@@ -266,3 +272,11 @@ body{
 .holder8 {
     animation-delay: calc(30s / 8 * (8 - 8) * -1);
   }
+  
+@keyframes slowdown {
+    
+    to{
+        transform: translateY(-200px)scale(0.9);
+    }
+    
+}
