@@ -46,6 +46,18 @@ body{
       opacity:1;
     }
   }
+  @keyframes slowdown {
+    
+    to{
+        transform: translateY(-200px)scale(0.9);
+    }
+    
+}
+@keyframes slideleft {
+    to{
+        left:-400px;
+    }
+}
 
 /*nav bar styling*/
 .nav-bar{
@@ -232,11 +244,6 @@ body{
         rgba(0,0,0,0)
     );
 }
-@keyframes slideleft {
-    to{
-        left:-400px;
-    }
-}
 .holder{
     height: 400px;
     width: 400px;
@@ -272,11 +279,64 @@ body{
 .holder8 {
     animation-delay: calc(30s / 8 * (8 - 8) * -1);
   }
-  
-@keyframes slowdown {
-    
+
+  @keyframes rotation {
     to{
-        transform: translateY(-200px)scale(0.9);
+        transform: rotate(90deg);
     }
+}
+  
+.element{
+    position: absolute;
+    z-index: -1;
+    opacity: 0.5;
+    animation: rotation;
+    animation-duration: 1ms;
+    animation-direction: normal;
+    animation-timeline: scroll();
+    filter: grayscale(100);
     
 }
+.element1{
+    top:5vh;
+    left: 5vh;
+}
+
+.element2{
+    top:10vh;
+    right: 20vh;
+}
+.element3{
+    top:75vh;
+    right: 75vh;
+}
+
+.element5{
+    top:80vh;
+    right: 10vh;
+}
+.element6{
+    top:75vh;
+    left: 10vh;
+}
+.element7{
+    top:20vh;
+    right: 40vh;
+}
+.element8{
+    top:60vh;
+    left: 40vh;
+}
+.element9{
+    top:15vh;
+    left: 25vh;
+}
+.element15{
+    top: 23vh;
+    left: 46vh;
+}
+.element13{
+    top: 19vh;
+    right: 100vh;
+}
+
