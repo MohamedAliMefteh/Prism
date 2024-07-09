@@ -1,0 +1,83 @@
+@import url('https://fonts.cdnfonts.com/css/typograph-pro');
+*{
+    text-decoration: none;
+    padding: 0px;
+    margin: 0;
+    font-family:'TYPOGRAPH PRO', sans-serif;
+}
+body{
+    background-image: url(secondback.jpg);
+    background-size: cover;
+    overflow-x: hidden;
+}
+    
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
+    width: 100vw;
+    flex-direction: column;
+    
+}
+.nav{
+    display: flex;
+    position: relative;
+    background-color: rgb(0 0 0 / 80%);
+    height: 50px;
+    width: 100vw;
+    z-index: 1;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+.nav a{
+    font-weight: bolder;
+    color: white;
+}
+.nav img{
+    width: 30px;
+    margin-left: 30px;
+    margin-right: 10px;
+filter: invert(100%);
+}
+.container{
+    background-color: rgb(0 0 0 / 80%);
+    position: re;
+    min-height: 50vh;
+    margin: 20px;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+h1{
+    color: white;
+}
+form{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+}
+input{
+    background-color: rgb(255, 255, 255);
+    border: none;
+    margin: 20px 0;
+    padding:8px ;
+    width:100%;
+    border-radius: 3px;
+    outline: none;
+}
+button{
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    margin: 30px 0px 0px 0px;
+    padding: 10px;
+    width: 50%;
+    cursor: pointer;
+}
