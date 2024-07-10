@@ -6,7 +6,7 @@
     font-family:'TYPOGRAPH PRO', sans-serif;
 }
 body{
-    background-image: url(secondback.jpg);
+    background-image: url(images/secondback.jpg);
     background-size: cover;
     overflow-x: hidden;
 }

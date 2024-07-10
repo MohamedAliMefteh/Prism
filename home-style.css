@@ -9,7 +9,7 @@
     animation: scrollreveal ease-in-out both;*/
 }
 body{
-    background-image: url(secondback.jpg);
+    background-image: url(images/secondback.jpg);
     background-size: cover;
     height: 100vh;
     background-repeat: repeat-y;
@@ -38,7 +38,17 @@ body{
       opacity:1;
     }
   }
-@keyframes slideup {
+@keyframes slideupimage {
+    0% {
+      transform: translate(30vw, 60px);
+      opacity:0;
+    }
+    100% {
+      transform: translate(30vw, 0);
+      opacity:1;
+    }
+  }
+  @keyframes slideuptext {
     0% {
       transform: translate(0, 60px);
       opacity:0;
@@ -104,14 +114,19 @@ body{
     transition: 0.3s;
 }
 /*items positioning */
-.item-1 img{
-    height: 50px;
-    cursor: pointer;
-}
 .item-1{
     justify-self: start;
     margin-left: 20px;
-    margin-right: 10px;
+    cursor: pointer;
+}
+.item-1 h1{
+    font-family:'TYPOGRAPH PRO', sans-serif ;
+    font-weight: bold;
+    color: #d3e349;
+    font-size:clamp(1rem,3vw,2rem);
+    letter-spacing: 1px;
+    stroke: none;
+    transition: 0.3s;
 }
 .item-2{
     grid-column-start: 2;
@@ -153,19 +168,21 @@ body{
 }
 /*items hovering effect*/
 .item-2 a:hover{
-    color: rgb(41, 110, 214);
+    color: #d3e349;
+    text-decoration: underline;
 }
 
 .item-3 a:hover{
-    color: rgb(41, 110, 214);
+    color: #d3e349;
+    text-decoration: underline;
 }
 .btn-2:hover{
-    background-color:rgb(186, 214, 255) ;
+    background-color:#ebfc54 ;
     border-radius: 5px;
 }
 .btn-1 a:hover{
     text-decoration: underline;
-    color: rgb(41, 110, 214);
+    color: #d3e349;
 }
 /*First page*/
 .first-page-grid{
@@ -176,21 +193,21 @@ body{
     justify-items: center;
     align-items: center;
     height: 100vh;
-    animation-name: slideup;
-    animation-duration: 2s;
-    animation-timing-function: ease;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
     animation: slowdown;
     animation-duration: 1ms;
     animation-direction: normal;
     animation-timeline: scroll();
 }
-.block-4 img{
-    height: 40vh;
-}
 .block-4{
-    justify-self: self-end;
+    position: absolute;
+    height: 100vh;
+    transform: translateX(30vw);
+    z-index: -1;
+    animation-name: slideupimage;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 .text-block{
     display: flex;
@@ -199,29 +216,29 @@ body{
     align-items: center;
     justify-content: center;
     margin: 20px;
-    
     font-family:'TYPOGRAPH PRO', sans-serif; 
-    animation-name: slideup;
+    animation-name: slideuptext;
     animation-duration: 3s;
     animation-timing-function: ease;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     transform: translate(0, 60px);
-    font-size:clamp(0.75rem,1.5vw,1rem);
+    
 }
 .text-block-1{
     flex-grow:0.05;
-    font-size: 3vh;
+    font-size:clamp(0.8rem,3vw,2rem);
     white-space: nowrap;
 }
 .text-block-2{
+    color: #d3e349;
     flex-grow: 0.1;
-    font-size: 3vh; 
+    font-size:clamp(0.8rem,3vw,2rem);
 }
 .text-block-3{
     font-style: oblique;
     text-align: center;
-    line-height: 5vh;
+    font-size:clamp(0.7rem,2vw,1rem);
 }
 /*Second page*/
 .second-page-grid{
@@ -243,6 +260,10 @@ body{
     font-family:'TYPOGRAPH PRO', sans-serif; 
     text-align: center;
     margin: 20px;
+}
+.second-page-title span{
+    color:#d3e349 ;
+    font-size: 3rem;
 }
 .wrapper{
     width: 90%;
@@ -364,6 +385,10 @@ body{
     font-family:'TYPOGRAPH PRO', sans-serif; 
     text-align: center;
 }
+.third-page-title span{
+    color: #d3e349;
+    font-size: 3rem;
+} 
 .allcardcontainers{
     display: flex;
     width: 100%;
