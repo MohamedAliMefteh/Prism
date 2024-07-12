@@ -8,21 +8,45 @@
         <title>SIGN UP</title>
     </head>
     <body>
+        <div class="element element1"><img src="images/Asset 4.png"></div>
+        <div class="element element2"><img src="images/Asset 13.png"></div>
+        <div class="element element3"><img src="images/Asset 14.png"></div>
+        <div class="element element5"><img src="images/Asset 15.png"></div>
+        <div class="element element6"><img src="images/Asset 4.png"></div>
+        <div class="element element8"><img src="images/Asset 13.png"></div>
+        <div class="element element15"><img src="images/Asset 13.png"></div>
         <div class="nav">
             <a href="home.html"><img src="images/left-arrow_152429.png"></a>
             <a href="home.html">Home</a>
         </div>
         <div class="form">
             <div class="container">
-                <form>
+                <div class="toogle">
+                    <div class="choice1">
+                        <p>Already have an Account?</p>
+                        <button type="button" class="btn-3" onclick="triggerTran()">SIGN IN</button>
+                    </div>
+                    <div class="choice2">
+                        <p>You don't have an account!</p>
+                        <button type="button" class="btn-3" onclick="oppTriggerTran()">SIGN UP</button>
+                    </div>
+                </div>
+                <form class="signup">
                     <h1>CREATE ACCOUNT</h1>
-                    <input type="text" placeholder="Full name">
-                    <input type="email" placeholder="Email">
-                    <input type="password" placeholder="Password">
-                    <input type="password" placeholder="Retype Password">
-                    <button>Sign Up</button>
+                    <input type="text" placeholder="Full name" class="full-name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" class="password" required>
+                    <input type="password" placeholder="Retype Password" class="password2" required>
+                    <button type="submit" class="btn-1">SIGN UP</button>
+                </form>
+                <form class="signin">
+                    <h1>SIGN IN</h1>
+                    <input type="text" placeholder="Full name" class="full-name" required>
+                    <input type="password" placeholder="Password" class="password" required>
+                    <button type="button"  class="btn-2">SIGN IN</button>
                 </form>
             </div>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>

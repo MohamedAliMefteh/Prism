@@ -40,11 +40,11 @@ body{
   }
 @keyframes slideupimage {
     0% {
-      transform: translate(30vw, 60px);
+      transform: translate(55vw, 100px);
       opacity:0;
     }
     100% {
-      transform: translate(30vw, 0);
+      
       opacity:1;
     }
   }
@@ -201,10 +201,11 @@ body{
 .block-4{
     position: absolute;
     height: 100vh;
-    transform: translateX(30vw);
+    transform: translateX(55vw);
     z-index: -1;
+    scale: 0.5;
     animation-name: slideupimage;
-    animation-duration: 2s;
+    animation-duration: 3s;
     animation-timing-function: ease;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -315,7 +316,7 @@ body{
     animation-delay: calc(30s / 8 * (8 - 8) * -1);
   }
 
-  @keyframes rotation {
+@keyframes rotation {
     to{
         transform: rotate(145deg);
     }
