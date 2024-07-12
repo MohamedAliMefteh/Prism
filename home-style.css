@@ -143,22 +143,11 @@ body{
     margin-left: 100px;
     margin-right: 10px;
 }
-.item-4{
-    grid-column-start: 3;
-    grid-row-start: 1;
-    justify-self:end ;
-    margin-right: 120px;
-    margin-left: 10px;
-}
 .item-5{
     grid-column-start: 3;
     grid-row-start: 1;
     justify-self:end;
     margin-right: 10px;
-}
-.btn-1{
-    border: none;
-    background:none;
 }
 .btn-2{
     background: none;
@@ -179,10 +168,6 @@ body{
 .btn-2:hover{
     background-color:#ebfc54 ;
     border-radius: 5px;
-}
-.btn-1 a:hover{
-    text-decoration: underline;
-    color: #d3e349;
 }
 /*First page*/
 .first-page-grid{
