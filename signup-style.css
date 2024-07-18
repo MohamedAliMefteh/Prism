@@ -122,6 +122,7 @@ form{
     white-space: nowrap;
     align-self: center;
     opacity: 0;
+    transform: translate(-5%);
     transition: 0.5s;
 }
 .signup{
